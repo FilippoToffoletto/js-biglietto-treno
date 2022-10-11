@@ -16,9 +16,7 @@ if(etaPass <= 18){
     costoIntero - (costoIntero*0.2)
 }else if(etaPass >= 65){
     costoIntero - (costoIntero*0.4)
-}else{
-    costoIntero
-};
+}
 
 
 document.getElementById('output').innerHTML = `
