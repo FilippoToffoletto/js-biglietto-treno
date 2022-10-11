@@ -11,12 +11,22 @@ const kmPass = parseInt(prompt('Quanti Km vuoi fare'));
 
 const costoIntero = (costoKm * kmPass);
 
-// console.log(etaPass, kmPass, costoIntero);
 
 if(etaPass <= 18){
-    console.log(costoIntero - (costoIntero*0.2))
+    costoIntero - (costoIntero*0.2)
 }else if(etaPass >= 65){
-    console.log(costoIntero - (costoIntero*0.4))
+    costoIntero - (costoIntero*0.4)
 }else{
-    console.log(costoIntero)
+    costoIntero
 };
+
+
+document.getElementById('output').innerHTML = `
+    il costo del  biglietto è ${costoIntero.toFixed(2)}€ 
+`
+document.getElementById('age').innerHTML = `
+    La tua eta' ${etaPass}anni.
+`
+document.getElementById('km').innerHTML = `
+    Distanza raggiungibile con il tuo ticket ${kmPass.toFixed(2)}Km.
+`
